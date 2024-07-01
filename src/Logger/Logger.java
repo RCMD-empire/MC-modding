@@ -12,12 +12,12 @@ public class Logger {
 
     public static enum Level { DEBUG, INFO, WARN, ERROR }
     private String Name;
-    private Level GlobalLogLevel;
+    private static Level GlobalLogLevel;
 
-    public Level getGlobalLogLevel() {
+    public static Level getGlobalLogLevel() {
         return GlobalLogLevel;
     }
-    public void setGlobalLogLevel(Level globalLogLevel) {
+    public static void setGlobalLogLevel(Level globalLogLevel) {
         GlobalLogLevel = globalLogLevel;
     }
     // 2 params constructor
@@ -78,7 +78,7 @@ public class Logger {
 
     public static void GlobalLogLevelTester(Level lvl){
         Logger log = new Logger("GlobalLogLevelTester");
-        log.setGlobalLogLevel(lvl);
+        Logger.setGlobalLogLevel(lvl);
         log.debug("Debug");
         log.info("info");
         log.warn("warn");
