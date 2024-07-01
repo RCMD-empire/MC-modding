@@ -15,7 +15,8 @@ public class Logger {
         Name = name;
     }
 
-    public String Output(String msg) {
+    private String Output(Level lvl, String msg) {
+        
         //Get current date time
         LocalDateTime now = LocalDateTime.now();
 
@@ -25,5 +26,16 @@ public class Logger {
 
         return "["+formatDateTime+"] ["+level+"] ["+Name+"] "+msg;
     }
-    
+    public void debug(String msg) {
+        Output(Level.DEBUG,msg);
+    }
+    public void info(String msg) {
+        Output(Level.INFO,msg);
+    }
+    public void warn(String msg) {
+        Output(Level.WARN,msg);
+    }
+    public void error(String msg) {
+        Output(Level.ERROR,msg);
+    }
 }
