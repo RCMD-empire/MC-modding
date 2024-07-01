@@ -7,6 +7,9 @@ public class Logger {
     private static final String RESET = "\u001B[0m";
     private static final String YELLOW = "\u001B[33m";
     private static final String RED = "\u001B[31m";
+    // not nessesary
+    private static final String BLUE = "\u001B[34m";
+
     public static enum Level { DEBUG, INFO, WARN, ERROR }
     private String Name;
     private Level GlobalLogLevel;
@@ -14,7 +17,6 @@ public class Logger {
     public Level getGlobalLogLevel() {
         return GlobalLogLevel;
     }
-
     public void setGlobalLogLevel(Level globalLogLevel) {
         GlobalLogLevel = globalLogLevel;
     }
@@ -52,7 +54,7 @@ public class Logger {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
             String formatDateTime = now.format(formatter);
             // formatting output
-            out += "[" + formatDateTime + "] [" + lvl + "] [" + Name + "] " + msg;
+            out += "[" + formatDateTime + "][" + lvl + "][" + Name + "] " + msg;
 
             // reverse coloring
             out += RESET;
@@ -60,6 +62,7 @@ public class Logger {
             System.out.println(out);
         }
     }
+
     public void debug(String msg) {
         Output(Level.DEBUG,msg);
     }
@@ -72,6 +75,7 @@ public class Logger {
     public void error(String msg) {
         Output(Level.ERROR,msg);
     }
+
     public static void GlobalLogLevelTester(Level lvl){
         Logger log = new Logger("GlobalLogLevelTester");
         log.setGlobalLogLevel(lvl);
