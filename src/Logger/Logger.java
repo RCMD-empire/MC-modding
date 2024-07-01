@@ -7,16 +7,33 @@ public class Logger {
     public static final String RESET = "\u001B[0m";
     public static final String YELLOW = "\u001B[0m";
     public static final String RED = "\u001B[0m";
-    enum Level { DEBUG, INFO, WARN, ERROR }
+    static enum Level { DEBUG, INFO, WARN, ERROR }
     public String Name;
-    public Level level;
 
     public Logger(String name) {
         Name = name;
     }
 
-    private String Output(Level lvl, String msg) {
-        
+    private void Output(Level lvl, String msg) {
+        String out="";
+        // coloring
+        switch (lvl)
+        {
+            case DEBUG:
+                out = RESET;
+                break;
+            case INFO:
+                out=RESET;
+                break;
+            case WARN:
+                out=YELLOW;
+                break;
+            case ERROR:
+                out=RED;
+                break;
+        }
+//        level.ordinal() <= lvl.ordinal()
+        //if(lvl.ordinal())
         //Get current date time
         LocalDateTime now = LocalDateTime.now();
 
@@ -24,7 +41,10 @@ public class Logger {
 
         String formatDateTime = now.format(formatter);
 
-        return "["+formatDateTime+"] ["+level+"] ["+Name+"] "+msg;
+        out+= "["+formatDateTime+"] ["+lvl+"] ["+Name+"] "+msg;
+        out+=RESET;
+        System.out.println(out);
+
     }
     public void debug(String msg) {
         Output(Level.DEBUG,msg);
