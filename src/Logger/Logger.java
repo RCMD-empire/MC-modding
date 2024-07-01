@@ -8,8 +8,14 @@ public class Logger {
     public static final String YELLOW = "\u001B[0m";
     public static final String RED = "\u001B[0m";
     enum Level { DEBUG, INFO, WARN, ERROR }
+    public String Name;
+    public Level level;
 
-    public String Output() {
+    public Logger(String name) {
+        Name = name;
+    }
+
+    public String Output(String msg) {
         //Get current date time
         LocalDateTime now = LocalDateTime.now();
 
@@ -17,6 +23,7 @@ public class Logger {
 
         String formatDateTime = now.format(formatter);
 
-        return "["+formatDateTime+"]";
+        return "["+formatDateTime+"] ["+level+"] ["+Name+"] "+msg;
     }
+    
 }

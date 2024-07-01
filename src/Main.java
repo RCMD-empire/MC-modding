@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main(String[] args) {
-        Logger log = new Logger();
-        System.out.println(log.Output());
+        Logger log = new Logger("Test");
+        System.out.println(log.Output("asd"));
     }
 }
