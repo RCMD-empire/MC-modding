@@ -1,5 +1,6 @@
 package com.rcmd.rcmdcraft;
 
+import com.rcmd.rcmdcraft.itemgroups.ModItemGroups;
 import com.rcmd.rcmdcraft.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -25,6 +26,7 @@ public class Rcmdcraft implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ModItems.RegisterModItems();
+		ModItemGroups.RegisterModItemGroups();
 		LOGGER.info(ModID +" has loaded!");
 	}
 }
