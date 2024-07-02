@@ -1,5 +1,6 @@
 package com.rcmd.rcmdcraft;
 
+import com.rcmd.rcmdcraft.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.item.Item;
@@ -16,14 +17,14 @@ public class Rcmdcraft implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("rcmdcraft");
 	public static final String ModID = "rcmdcraft";
 
-	public static final Item AARE = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+
 
 	@Override
 	public void onInitialize() {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		Registry.register(Registry.ITEM,new Identifier(ModID, "aare"),AARE);
+		ModItems.RegisterModItems();
 		LOGGER.info(ModID +" has loaded!");
 	}
 }
