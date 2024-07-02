@@ -2,6 +2,8 @@ package com.rcmd.rcmdcraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,8 @@ public class Rcmdcraft implements ModInitializer {
 	// That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger("rcmdcraft");
 	public static final String ModID = "rcmdcraft";
+
+	public static final Item AARE = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
 
 	@Override
 	public void onInitialize() {
