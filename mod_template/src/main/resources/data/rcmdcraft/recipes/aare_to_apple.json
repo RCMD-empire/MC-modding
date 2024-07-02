@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "rcmdcraft:aare"
+    }
+  ],
+  "result": {
+    "count": 6,
+    "item": "minecraft:apple"
+  }
+}
