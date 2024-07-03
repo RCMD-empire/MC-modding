@@ -1,3 +1,7 @@
 {
-  "item.rcmdcraft.aare": "Aare"
+  "item.rcmdcraft.aare": "Aare",
+  "itemGroup.rcmdcraft.rcmd_group": "RcmdCraft Items",
+  "block.rcmdcraft.aare_block": "Aare Block",
+  "block.rcmdcraft.aare_ore": "Aare Ore",
+  "block.rcmdcraft.aaronic": "Aaronic"
 }
