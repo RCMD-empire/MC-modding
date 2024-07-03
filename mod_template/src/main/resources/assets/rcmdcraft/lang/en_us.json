@@ -4,5 +4,6 @@
   "itemGroup.rcmdcraft.rcmd_group": "RcmdCraft Items",
   "block.rcmdcraft.aare_block": "Aare Block",
   "block.rcmdcraft.aare_ore": "Aare Ore",
-  "block.rcmdcraft.aaronic": "Aaronic"
+  "block.rcmdcraft.aaronic": "Aaronic",
+  "item.rcmdcraft.aaronic_pickaxe": "Aaronic Pickaxe"
 }
