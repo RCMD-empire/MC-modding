@@ -5,8 +5,7 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 public enum AaronicToolMaterial implements ToolMaterial {
-    MATERIAL(4,3600,12.0F,4.0F,10,
-            ()->{return Ingredient.ofItems(ModItems.AARE);});
+    MATERIAL(4,3600,12.0F,4.0F,10, ()->{return Ingredient.ofItems(ModItems.AARE);});
     @Override
     public int getDurability() {
         return 0;
