@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1,
+  "ingredient": {
+    "item": "rcmdcraft:aare"
+  },
+  "result": "rcmdcraft:smelted_aare"
+}
