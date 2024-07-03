@@ -7,3 +7,8 @@ https://fabricmc.net/develop/template/
 - no Mojang mapping / just Yarn
 - Data Generation on
 - Split resources on
+
+**How to get textures, recipes, and original files?**
+- IntelliJ: External libraries on the project view and search "minecraft-only" or "minecraft-common", and copy from it.
+- Then modify it (raname, rewrite).
+- If its an image, and for edit it with apha channel online: https://web.blockbench.net/
