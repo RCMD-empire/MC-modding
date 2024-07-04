@@ -1,7 +1,7 @@
 package com.rcmd.rcmdcraft.items;
 
 import com.rcmd.rcmdcraft.itemgroups.ModItemGroups;
-import com.rcmd.rcmdcraft.mixin.materials.AaronicToolMaterial;
+import com.rcmd.rcmdcraft.materials.AaronicToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.util.Identifier;
