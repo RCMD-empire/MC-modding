@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mc_modding.iml" filepath="$PROJECT_DIR$/mc_modding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/related_project.iml" filepath="$PROJECT_DIR$/related_project.iml" />
     </modules>
   </component>
 </project>
