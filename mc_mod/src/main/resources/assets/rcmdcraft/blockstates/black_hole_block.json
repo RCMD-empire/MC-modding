@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "rcmdcraft:block/black_hole_block" }
+  }
+}
