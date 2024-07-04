@@ -7,9 +7,8 @@
   "block.rcmdcraft.aare_ore": "Aare Ore",
   "item.rcmdcraft.aaronic_pickaxe": "Aaronic Pickaxe",
   "block.rcmdcraft.ionization_block": "Ionization Block",
-  "ionized_block
-  black_hole_block
-  ion_ore
-  ionizator
-
+  "block.rcmdcraft.ionized_block":"Ionized Block",
+  "block.rcmdcraft.black_hole_block": "Black Hole",
+  "block.rcmdcraft.ion_ore": "Ion Ore",
+  "block.rcmdcraft.ionizator": "Ionizator"
 }
