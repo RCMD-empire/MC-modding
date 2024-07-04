@@ -2,6 +2,10 @@
   "replace": false,
   "values": [
     "rcmdcraft:aare_ore",
-    "rcmdcraft:aare_block"
+    "rcmdcraft:aare_block",
+    "rcmdcraft:ionization_block",
+    "rcmdcraft:ionized_block",
+    "rcmdcraft:ion_ore",
+    "rcmdcraft:ionizator"
   ]
 }
