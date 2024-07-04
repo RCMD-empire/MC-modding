@@ -13,13 +13,16 @@ public class ModItems {
     public static final Item AARE = new Item(new Item.Settings().group(ModItemGroups.RCMD_GROUP));
     public static final Item AARONIC = new Item(new Item.Settings().group(ModItemGroups.RCMD_GROUP));
     public static final Item SMELTED_AARE = new Item(new Item.Settings().group(ModItemGroups.RCMD_GROUP));
-
+    public static final Item ION = new Item(new Item.Settings().group(ModItemGroups.RCMD_GROUP));
+    public static final Item IONIZED_ION = new Item(new Item.Settings().group(ModItemGroups.RCMD_GROUP));
     public static final PickaxeItem AARONIC_PICKAXE = new PickaxeItem(AaronicToolMaterial.MATERIAL,1,1,new Item.Settings().group(ModItemGroups.RCMD_GROUP));
 
     public static void RegisterModItems(){
         Registry.register(Registry.ITEM,new Identifier(ModID, "aare"),AARE);
         Registry.register(Registry.ITEM,new Identifier(ModID, "aaronic"),AARONIC);
         Registry.register(Registry.ITEM,new Identifier(ModID, "smelted_aare"),SMELTED_AARE);
+        Registry.register(Registry.ITEM,new Identifier(ModID, "ion"),ION);
+        Registry.register(Registry.ITEM,new Identifier(ModID, "ionized_ion"),IONIZED_ION);
         Registry.register(Registry.ITEM,new Identifier(ModID, "aaronic_pickaxe"),AARONIC_PICKAXE);
     }
 }
