@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "rcmdcraft:aare_block"
+          "name": "rcmdcraft:ionizator"
         }
       ],
       "rolls": 1.0
