@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "rcmdcraft:block/ionized_block" }
+  }
+}
