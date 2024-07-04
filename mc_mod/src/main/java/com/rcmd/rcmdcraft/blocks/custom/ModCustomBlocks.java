@@ -14,7 +14,7 @@ import static com.rcmd.rcmdcraft.Rcmdcraft.ModID;
 
 public class ModCustomBlocks {
     static final Block AARE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(1f,6f));
-    static final Block AARE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3f).requiresTool());
+   public static final Block AARE_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1.3f).requiresTool());
     public static void RegisterModBlocks() {
         Registry.register(Registry.BLOCK,new Identifier(ModID, "aare_block"),AARE_BLOCK);
         Registry.register(Registry.ITEM,new Identifier(ModID, "aare_block"),
