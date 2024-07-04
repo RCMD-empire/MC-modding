@@ -1,4 +1,4 @@
-package com.rcmd.rcmdcraft.materials;
+package com.rcmd.rcmdcraft.mixin.materials;
 
 import com.rcmd.rcmdcraft.items.ModItems;
 import net.minecraft.item.ToolMaterial;

@@ -5,5 +5,10 @@
   "item.rcmdcraft.smelted_aare": "Smelted Aare",
   "block.rcmdcraft.aare_block": "Aare Block",
   "block.rcmdcraft.aare_ore": "Aare Ore",
-  "item.rcmdcraft.aaronic_pickaxe": "Aaronic Pickaxe"
+  "item.rcmdcraft.aaronic_pickaxe": "Aaronic Pickaxe",
+  "block.rcmdcraft.ionization_block": "Ionization Block",
+  "block.rcmdcraft.ionized_block":"Ionized Block",
+  "block.rcmdcraft.black_hole_block": "Black Hole",
+  "block.rcmdcraft.ion_ore": "Ion Ore",
+  "block.rcmdcraft.ionizator": "Ionizator"
 }
