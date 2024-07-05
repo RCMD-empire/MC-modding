@@ -6,15 +6,11 @@ import net.minecraft.recipe.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum AaronicToolMaterial implements ToolMaterial {
-    MATERIAL(4,
-            3600,
-            12.0F,
-            4.0F,
-            10,
-            ()->{return Ingredient.ofItems(ModItems.AARE);});
+public enum RcmdcraftToolMaterial implements ToolMaterial {
+    AARE(4, 1800, 8.0F, 4.0F, 10, ()->{return Ingredient.ofItems(ModItems.AARE);}),
+    AARONIC(5, 3600, 12.0F, 8.0F, 10, ()->{return Ingredient.ofItems(ModItems.AARONIC);});
 
-    AaronicToolMaterial(int miningLevel, int durability, float miningSpeedMultiplier, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+    RcmdcraftToolMaterial(int miningLevel, int durability, float miningSpeedMultiplier, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         MiningLevel = miningLevel;
         Durability = durability;
         MiningSpeedMultiplier = miningSpeedMultiplier;
