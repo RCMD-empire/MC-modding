@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "rcmdcraft:block/black_hole_block"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "rcmdcraft:aare"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "rcmdcraft:aare_pickaxe"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "itemGroup.rcmdcraft.rcmd_group": "RcmdCraft Items",
+  "item.rcmdcraft.aare": "Aare",
+  "item.rcmdcraft.aaronic": "Aaronic",
+  "item.rcmdcraft.ion": "Ion",
+  "item.rcmdcraft.ionized_ion": "Ionized Ion",
+  "item.rcmdcraft.smelted_aare": "Smelted Aare",
+  "block.rcmdcraft.aare_block": "Aare Block",
+  "block.rcmdcraft.aare_ore": "Aare Ore",
+  "item.rcmdcraft.aare_pickaxe": "Aare Pickaxe",
+  "item.rcmdcraft.aaronic_multitool": "Aaronic Multitool",
+  "block.rcmdcraft.ionization_block": "Ionization Block",
+  "block.rcmdcraft.ionized_block":"Ionized Block",
+  "block.rcmdcraft.black_hole_block": "Black Hole",
+  "block.rcmdcraft.ion_ore": "Ion Ore",
+  "block.rcmdcraft.ionizator": "Ionizator"
+}

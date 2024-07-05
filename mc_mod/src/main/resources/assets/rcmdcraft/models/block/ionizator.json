@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "rcmdcraft:block/ionizator_front",
+    "side": "rcmdcraft:block/ionizator_side",
+    "top": "rcmdcraft:block/ionizator_top"
+  }
+}
