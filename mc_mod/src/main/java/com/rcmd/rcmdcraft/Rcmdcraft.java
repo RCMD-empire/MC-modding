@@ -4,6 +4,7 @@ import com.rcmd.rcmdcraft.blocks.custom.ModCustomBlocks;
 import com.rcmd.rcmdcraft.blocks.entity.ModBlockEntites;
 import com.rcmd.rcmdcraft.itemgroups.ModItemGroups;
 import com.rcmd.rcmdcraft.items.ModItems;
+import com.rcmd.rcmdcraft.screen.ModScreenHandlers;
 import com.rcmd.rcmdcraft.world.feature.ModConfiguredFeatures;
 import com.rcmd.rcmdcraft.world.gen.ModOreGeneration;
 import net.fabricmc.api.ModInitializer;
@@ -36,6 +37,7 @@ public class Rcmdcraft implements ModInitializer {
 		ModCustomBlocks.RegisterModBlocks();
 		ModOreGeneration.GenerateOre();
 		ModBlockEntites.RegisterBlockEntities();
+		ModScreenHandlers.registerAllScreenHandlers();
 		LOGGER.info(ModID +" has loaded!");
 	}
 }

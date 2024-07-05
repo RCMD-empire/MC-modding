@@ -1,6 +1,7 @@
 package com.rcmd.rcmdcraft.blocks.custom;
 
 import com.rcmd.rcmdcraft.blocks.entity.IonizatorBlockEntity;
+import com.rcmd.rcmdcraft.blocks.entity.ModBlockEntites;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -55,7 +56,7 @@ public class IonizatorBlock extends BlockWithEntity implements BlockEntityProvid
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        //return null; //todo
+        return new IonizatorBlockEntity(pos,state); //todo
     }
 
     @Override
@@ -71,7 +72,7 @@ public class IonizatorBlock extends BlockWithEntity implements BlockEntityProvid
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        //return checkType(type,ModCustomBlockEntities.,) //todo
+        return checkType(type, ModBlockEntites.IONIZATOR, IonizatorBlockEntity::tick);
     }
 
     @Nullable
@@ -107,6 +108,11 @@ public class IonizatorBlock extends BlockWithEntity implements BlockEntityProvid
             }
         }
         return ActionResult.SUCCESS;
+    }
+    @Nullable
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
+        return checkType(type, ModBlockEntites.IONIZATOR, IonizatorBlockEntity::tick); //TODO
     }
 
 }
