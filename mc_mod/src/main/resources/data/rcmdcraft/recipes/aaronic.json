@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "rcmdcraft:smelted_aare"
+    }
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "item": "rcmdcraft:aaronic"
+  }
+}

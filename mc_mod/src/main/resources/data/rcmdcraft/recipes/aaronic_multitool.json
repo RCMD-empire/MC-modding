@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "rcmdcraft:aaronic"
+    }
+  },
+  "pattern": [
+    "###",
+    " # ",
+    " # "
+  ],
+  "result": {
+    "item": "rcmdcraft:aaronic_multitool"
+  }
+}
