@@ -22,7 +22,7 @@ public class IonizatorScreenHandler extends ScreenHandler {
     }
 
     public IonizatorScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
-        super(ModScreenHandlers.IONIZATOR_SCREEN_HANDLER, syncId); //todo
+        super(ModScreenHandlers.IONIZATOR_SCREEN_HANDLER, syncId);
         checkSize(inventory, 2);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
