@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "rcmdcraft:item/aaronic_pickaxe"
+    "layer0": "rcmdcraft:item/aaronic_multitool"
   }
 }
