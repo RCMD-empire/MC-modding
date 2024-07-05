@@ -1,5 +1,6 @@
 package com.rcmd.rcmdcraft.blocks.custom;
 
+import com.rcmd.rcmdcraft.blocks.entity.IonizatorBlockEntity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -89,7 +90,7 @@ public class IonizatorBlock extends BlockWithEntity implements BlockEntityProvid
         if (state.getBlock()!= newState.getBlock()){
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof IonizatorBlockEntity){
-                ItemScatterer.spawn(world,pos,(IonizatorBlockEnity)blockEntity); //todo
+                ItemScatterer.spawn(world,pos,(IonizatorBlockEntity)blockEntity); //todo
                 world.updateComparators(pos,this);
             }
             super.onStateReplaced(state,world,pos,newState,moved);
