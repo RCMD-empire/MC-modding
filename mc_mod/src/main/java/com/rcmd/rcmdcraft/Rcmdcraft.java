@@ -1,6 +1,7 @@
 package com.rcmd.rcmdcraft;
 
 import com.rcmd.rcmdcraft.blocks.custom.ModCustomBlocks;
+import com.rcmd.rcmdcraft.blocks.entity.ModBlockEntites;
 import com.rcmd.rcmdcraft.itemgroups.ModItemGroups;
 import com.rcmd.rcmdcraft.items.ModItems;
 import com.rcmd.rcmdcraft.world.feature.ModConfiguredFeatures;
@@ -34,6 +35,7 @@ public class Rcmdcraft implements ModInitializer {
 		ModItemGroups.RegisterModItemGroups();
 		ModCustomBlocks.RegisterModBlocks();
 		ModOreGeneration.GenerateOre();
+		ModBlockEntites.RegisterBlockEntities();
 		LOGGER.info(ModID +" has loaded!");
 	}
 }
