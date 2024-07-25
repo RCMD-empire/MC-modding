@@ -30,7 +30,7 @@ public class IonizatorBlockEntity extends BlockEntity implements NamedScreenHand
     protected final PropertyDelegate propertyDelegate;
     private int progress=0;
     private int maxProgress =72;
-    public IonizatorBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+    public IonizatorBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntites.IONIZATOR, pos, state);
         this.propertyDelegate=new PropertyDelegate() {
             @Override

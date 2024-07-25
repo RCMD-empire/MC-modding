@@ -23,9 +23,7 @@ public interface ImplementedInventory extends SidedInventory {
     /**
      * Creates an inventory from the item list.
      */
-    static ImplementedInventory of(DefaultedList<ItemStack> items) {
-        return () -> items;
-    }
+    static ImplementedInventory of(DefaultedList<ItemStack> items) {return () -> items;}
     
     /**
      * Creates a new inventory with the specified size.

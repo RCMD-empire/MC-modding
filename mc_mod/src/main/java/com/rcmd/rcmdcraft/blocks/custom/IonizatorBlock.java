@@ -75,11 +75,13 @@ public class IonizatorBlock extends BlockWithEntity implements BlockEntityProvid
         return checkType(type, ModBlockEntites.IONIZATOR, IonizatorBlockEntity::tick);
     }
 
-    @Nullable
+    /*@Nullable
     @Override
     public <T extends BlockEntity> GameEventListener getGameEventListener(ServerWorld world, T blockEntity) {
         return BlockEntityProvider.super.getGameEventListener(world, blockEntity); //todo
     }
+
+     */
 
     @Override
     public BlockState getAppearance(BlockState state, BlockRenderView renderView, BlockPos pos, Direction side, @Nullable BlockState sourceState, @Nullable BlockPos sourcePos) {
@@ -108,11 +110,6 @@ public class IonizatorBlock extends BlockWithEntity implements BlockEntityProvid
             }
         }
         return ActionResult.SUCCESS;
-    }
-    @Nullable
-    @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-        return checkType(type, ModBlockEntites.IONIZATOR, IonizatorBlockEntity::tick); //TODO
     }
 
 }
