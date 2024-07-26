@@ -3,12 +3,9 @@ package com.rcmd.rcmdcraft.blocks.entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.math.Direction;
-import org.jetbrains.annotations.Nullable;
+
 /**
  * A simple {@code Inventory} implementation with only default methods + an item list getter.
  *
@@ -20,7 +17,7 @@ public interface ImplementedInventory extends Inventory {
      * Retrieves the item list of this inventory.
      * Must return the same instance every time it's called.
      */
-    DefaultedList<ItemStack> getItems();
+    DefaultedList<ItemStack> getInventory();
 
     /**
      * Creates an inventory from the item list.
@@ -41,7 +38,7 @@ public interface ImplementedInventory extends Inventory {
      */
     @Override
     default int size() {
-        return getItems().size();
+        return getInventory().size();
     }
 
     /**
@@ -64,7 +61,7 @@ public interface ImplementedInventory extends Inventory {
      */
     @Override
     default ItemStack getStack(int slot) {
-        return getItems().get(slot);
+        return getInventory().get(slot);
     }
 
     /**
@@ -75,7 +72,7 @@ public interface ImplementedInventory extends Inventory {
      */
     @Override
     default ItemStack removeStack(int slot, int count) {
-        ItemStack result = Inventories.splitStack(getItems(), slot, count);
+        ItemStack result = Inventories.splitStack(getInventory(), slot, count);
         if (!result.isEmpty()) {
             markDirty();
         }
@@ -88,7 +85,7 @@ public interface ImplementedInventory extends Inventory {
      */
     @Override
     default ItemStack removeStack(int slot) {
-        return Inventories.removeStack(getItems(), slot);
+        return Inventories.removeStack(getInventory(), slot);
     }
 
     /**
@@ -100,7 +97,7 @@ public interface ImplementedInventory extends Inventory {
      */
     @Override
     default void setStack(int slot, ItemStack stack) {
-        getItems().set(slot, stack);
+        getInventory().set(slot, stack);
         if (stack.getCount() > stack.getMaxCount()) {
             stack.setCount(stack.getMaxCount());
         }
@@ -111,7 +108,7 @@ public interface ImplementedInventory extends Inventory {
      */
     @Override
     default void clear() {
-        getItems().clear();
+        getInventory().clear();
     }
 
     /**

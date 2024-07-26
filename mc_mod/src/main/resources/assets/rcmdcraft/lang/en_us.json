@@ -13,5 +13,6 @@
   "block.rcmdcraft.ionized_block":"Ionized Block",
   "block.rcmdcraft.black_hole_block": "Black Hole",
   "block.rcmdcraft.ion_ore": "Ion Ore",
-  "block.rcmdcraft.ionizator": "Ionizator"
+  "block.rcmdcraft.ionizator": "Ionizator",
+  "screen.rcmdcraft.ionizator_menutitle": "Ionizator"
 }

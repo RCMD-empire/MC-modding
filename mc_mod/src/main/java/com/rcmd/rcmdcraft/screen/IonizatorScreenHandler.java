@@ -1,5 +1,6 @@
 package com.rcmd.rcmdcraft.screen;
 
+import com.rcmd.rcmdcraft.blocks.entity.IonizatorBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
@@ -18,16 +19,16 @@ public class IonizatorScreenHandler extends ScreenHandler {
     private final PropertyDelegate propertyDelegate;
 
     public IonizatorScreenHandler(int syncId, PlayerInventory inventory) {
-        this(syncId, inventory, new SimpleInventory(2), new ArrayPropertyDelegate(2));
+        this(syncId, inventory, new SimpleInventory(IonizatorBlockEntity.invSize), new ArrayPropertyDelegate(IonizatorBlockEntity.invSize));
     }
 
     public IonizatorScreenHandler(int syncId, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate delegate) {
         super(ModScreenHandlers.IONIZATOR_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 2);
+        checkSize(inventory, IonizatorBlockEntity.invSize);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
-
+        // (menu) picture dependent
         this.addSlot(new Slot(inventory, 0, 12, 15));
         this.addSlot(new Slot(inventory, 1, 86, 15));
 
@@ -77,5 +78,16 @@ public class IonizatorScreenHandler extends ScreenHandler {
         for (int i = 0; i < 9; ++i) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
         }
+    }
+    public boolean isCrafting()
+    {return propertyDelegate.get(0)>0;}
+
+    public int getScaledProgress()
+    {
+        int progress = propertyDelegate.get(0);
+        int maxprogress = propertyDelegate.get(1);
+        int progress_arrowSize = 26; //UIban 26 pixel a nyil
+
+        return maxprogress!=0 && progress!=0 ? progress*progress_arrowSize/maxprogress : 0;
     }
 }
