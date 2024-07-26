@@ -1,30 +1,42 @@
 package com.rcmd.rcmdcraft.blocks.entity;
 
-import com.rcmd.rcmdcraft.items.ModItems;
-import com.rcmd.rcmdcraft.screen.IonizatorScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.inventory.SimpleInventory;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.screen.PropertyDelegate;
-import net.minecraft.screen.ScreenHandler;
-import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
-import org.jetbrains.annotations.Nullable;
 
-public class IonizatorBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory{
+public class IonizatorBlockEntity extends BlockEntity implements  ImplementedInventory{
 
+
+    private final DefaultedList<ItemStack> items = DefaultedList.ofSize(2, ItemStack.EMPTY);
+
+    public IonizatorBlockEntity(BlockPos pos, BlockState state) {
+        super(ModBlockEntites.IONIZATOR, pos, state);
+    }
+
+    @Override
+    public DefaultedList<ItemStack> getItems() {
+        return items;
+    }
+    @Override
+    public void readNbt(NbtCompound nbt) {
+        super.readNbt(nbt);
+        Inventories.readNbt(nbt, items);
+    }
+
+    @Override
+    public void writeNbt(NbtCompound nbt) {
+        Inventories.writeNbt(nbt, items);
+    }
+
+    public static void tick(World world, BlockPos blockPos, BlockState blockState, IonizatorBlockEntity ionizatorBlockEntity) {
+    }
+    /*
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(2,ItemStack.EMPTY);
 
     protected final PropertyDelegate propertyDelegate;
@@ -151,4 +163,6 @@ public class IonizatorBlockEntity extends BlockEntity implements NamedScreenHand
     public boolean canExtract(int slot, ItemStack stack, Direction dir) {
         return false;
     }
+
+     */
 }

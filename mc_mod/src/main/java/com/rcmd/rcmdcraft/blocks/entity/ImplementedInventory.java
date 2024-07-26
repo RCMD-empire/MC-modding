@@ -5,33 +5,37 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.collection.DefaultedList;
-
+import net.minecraft.util.math.Direction;
+import org.jetbrains.annotations.Nullable;
 /**
  * A simple {@code Inventory} implementation with only default methods + an item list getter.
  *
  * Originally by Juuz
  */
-public interface ImplementedInventory extends SidedInventory {
+public interface ImplementedInventory extends Inventory {
 
     /**
      * Retrieves the item list of this inventory.
      * Must return the same instance every time it's called.
      */
     DefaultedList<ItemStack> getItems();
-    
+
     /**
      * Creates an inventory from the item list.
      */
-    static ImplementedInventory of(DefaultedList<ItemStack> items) {return () -> items;}
-    
+    static ImplementedInventory of(DefaultedList<ItemStack> items) {
+        return () -> items;
+    }
+
     /**
      * Creates a new inventory with the specified size.
      */
     static ImplementedInventory ofSize(int size) {
         return of(DefaultedList.ofSize(size, ItemStack.EMPTY));
     }
-    
+
     /**
      * Returns the inventory size.
      */
@@ -39,7 +43,7 @@ public interface ImplementedInventory extends SidedInventory {
     default int size() {
         return getItems().size();
     }
-    
+
     /**
      * Checks if the inventory is empty.
      * @return true if this inventory has only empty stacks, false otherwise.
@@ -54,7 +58,7 @@ public interface ImplementedInventory extends SidedInventory {
         }
         return true;
     }
-    
+
     /**
      * Retrieves the item in the slot.
      */
@@ -62,7 +66,7 @@ public interface ImplementedInventory extends SidedInventory {
     default ItemStack getStack(int slot) {
         return getItems().get(slot);
     }
-    
+
     /**
      * Removes items from an inventory slot.
      * @param slot  The slot to remove from.
@@ -77,7 +81,7 @@ public interface ImplementedInventory extends SidedInventory {
         }
         return result;
     }
-    
+
     /**
      * Removes all items from an inventory slot.
      * @param slot The slot to remove from.
@@ -86,7 +90,7 @@ public interface ImplementedInventory extends SidedInventory {
     default ItemStack removeStack(int slot) {
         return Inventories.removeStack(getItems(), slot);
     }
-    
+
     /**
      * Replaces the current stack in an inventory slot with the provided stack.
      * @param slot  The inventory slot of which to replace the itemstack.
@@ -101,7 +105,7 @@ public interface ImplementedInventory extends SidedInventory {
             stack.setCount(stack.getMaxCount());
         }
     }
-    
+
     /**
      * Clears the inventory.
      */
@@ -109,20 +113,20 @@ public interface ImplementedInventory extends SidedInventory {
     default void clear() {
         getItems().clear();
     }
-    
+
     /**
      * Marks the state as dirty.
      * Must be called after changes in the inventory, so that the game can properly save
      * the inventory contents and notify neighboring blocks of inventory changes.
-     */ 
+     */
     @Override
     default void markDirty() {
         // Override if you want behavior.
     }
-    
+
     /**
      * @return true if the player can use the inventory, false otherwise.
-     */ 
+     */
     @Override
     default boolean canPlayerUse(PlayerEntity player) {
         return true;
