@@ -19,8 +19,8 @@ public class IonizatorScreen extends HandledScreen<IonizatorScreenHandler> {
     @Override
     protected void init() {
         super.init();
-        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
-        titleY=0;
+        titleX = 5;
+        titleY = 5;
     }
 
     @Override
