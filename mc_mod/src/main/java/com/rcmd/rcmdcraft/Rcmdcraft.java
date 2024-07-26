@@ -31,13 +31,13 @@ public class Rcmdcraft implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 		ModConfiguredFeatures.RegisterConfiguredFeatures(); // need to be the first one
+		ModScreenHandlers.registerAllScreenHandlers();
 
 		ModItems.RegisterModItems();
 		ModItemGroups.RegisterModItemGroups();
 		ModCustomBlocks.RegisterModBlocks();
 		ModOreGeneration.GenerateOre();
 		ModBlockEntites.RegisterBlockEntities();
-		ModScreenHandlers.registerAllScreenHandlers();
 		LOGGER.info(ModID +" has loaded!");
 	}
 }

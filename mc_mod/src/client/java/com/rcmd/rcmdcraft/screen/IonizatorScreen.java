@@ -38,5 +38,14 @@ public class IonizatorScreen extends HandledScreen<IonizatorScreenHandler> {
         int X = (width-backgroundWidth) /2;
         int Y = (height-backgroundHeight) /2;
         drawTexture(matrices,X,Y,0,0,backgroundWidth,backgroundHeight);
+        renderProgressArrow(matrices,X,Y);
+    }
+    private void renderProgressArrow(MatrixStack matrices, int x, int y)
+    {
+        if (handler.isCrafting())
+        {
+            //matrices, top left x, top left y, from where top left x, from where top left y, width amount, height amount
+            drawTexture(matrices,x+85,y+30,176,0,8,handler.getScaledProgress());
+        }
     }
 }
