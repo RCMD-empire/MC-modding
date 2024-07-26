@@ -125,9 +125,9 @@ public class IonizatorBlockEntity extends BlockEntity implements NamedScreenHand
             inventory.setStack(i, entity.getStack(i));
         }
 
-        boolean hasRawGemInFirstSlot = entity.getStack(INPUT_SLOT).getItem() == ModItems.ION; //todo
+        boolean hasIonInFirstSlot = entity.getStack(INPUT_SLOT).getItem() == ModItems.ION; //todo
 
-        return hasRawGemInFirstSlot && canInsertAmountIntoOutputSlot(inventory)
+        return hasIonInFirstSlot && canInsertAmountIntoOutputSlot(inventory)
                 && canInsertItemIntoOutputSlot(inventory, ModItems.IONIZED_ION);
     }
 
