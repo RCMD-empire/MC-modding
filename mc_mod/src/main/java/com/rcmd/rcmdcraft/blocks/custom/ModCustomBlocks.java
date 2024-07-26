@@ -19,7 +19,7 @@ public class ModCustomBlocks {
     static final Block IONIZED_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(1f));
     static final Block BLACK_HOLE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(1f));
     static final Block ION_ORE = new Block(FabricBlockSettings.of(Material.STONE).strength(1f));
-    static final Block IONIZATOR = new Block(FabricBlockSettings.of(Material.STONE).strength(1f));
+    public static final Block IONIZATOR = new IonizatorBlock(FabricBlockSettings.of(Material.STONE).strength(1f));
     public static void RegisterModBlocks() {
         Registry.register(Registry.BLOCK,new Identifier(ModID, "aare_block"),AARE_BLOCK);
         Registry.register(Registry.ITEM,new Identifier(ModID, "aare_block"),

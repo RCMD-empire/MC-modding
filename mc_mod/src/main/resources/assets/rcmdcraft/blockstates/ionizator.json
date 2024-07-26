@@ -1,5 +1,20 @@
 {
   "variants": {
-    "": { "model": "rcmdcraft:block/ionizator" }
+    "facing=north": {
+      "model": "rcmdcraft:block/ionizator",
+      "y": 0
+    },
+    "facing=south": {
+      "model": "rcmdcraft:block/ionizator",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "rcmdcraft:block/ionizator",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "rcmdcraft:block/ionizator",
+      "y": 270
+    }
   }
 }
